@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
   "id": "headlines",
-  "version": "${version}",
-  "name": "Headlines",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
   "authors": [
-    "Me!"
+    "${mod_authors}"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "${mod_page}",
+    "sources": "${mod_github}"
   },
-  "license": "CC0-1.0",
-  "icon": "assets/headlines/icon.png",
+  "license": "${mod_license}",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -33,6 +33,5 @@
     "fabric-api": "*"
   },
   "suggests": {
-    "another-mod": "*"
   }
 }
