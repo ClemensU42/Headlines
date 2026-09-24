@@ -37,7 +37,9 @@ public final class HeadlinesCommon {
                 () -> new MailboxBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_LIGHT_GRAY)
                         .strength(2.5f)
-                        .sound(SoundType.METAL)));
+                        .sound(SoundType.METAL)
+                        .noOcclusion()
+                        .dynamicShape()));
 
         public static void init(){
         }

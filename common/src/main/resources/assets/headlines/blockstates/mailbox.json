@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "headlines:block/mailbox"},
+    "facing=east": {"model": "headlines:block/mailbox", "y":  90},
+    "facing=south": {"model": "headlines:block/mailbox", "y":  180},
+    "facing=west": {"model": "headlines:block/mailbox", "y":  270}
+  }
+}

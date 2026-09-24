@@ -1,0 +1,53 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 64],
+	"textures": {
+		"0": "headlines:block/mailbox",
+		"particle": "headlines:block/mailbox"
+	},
+	"elements": [
+		{
+			"name": "stone_base",
+			"from": [5, 0, 5],
+			"to": [11, 8, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 0, 5]},
+			"faces": {
+				"north": {"uv": [0, 14, 3, 16], "texture": "#0"},
+				"east": {"uv": [3, 14, 6, 16], "texture": "#0"},
+				"south": {"uv": [0, 10, 3, 12], "texture": "#0"},
+				"west": {"uv": [0, 12, 3, 14], "texture": "#0"},
+				"up": {"uv": [3, 12, 7, 14], "texture": "#0"},
+				"down": {"uv": [3, 10, 7, 12], "texture": "#0"}
+			}
+		},
+		{
+			"name": "wooden_post",
+			"from": [7, 8, 7],
+			"to": [9, 22, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 8, 7]},
+			"faces": {
+				"north": {"uv": [8, 9, 10, 16], "texture": "#0"},
+				"east": {"uv": [10, 9, 12, 16], "texture": "#0"},
+				"south": {"uv": [12, 9, 14, 16], "texture": "#0"},
+				"west": {"uv": [14, 9, 16, 16], "texture": "#0"},
+				"up": {"uv": [6, 14, 8, 15], "texture": "#0"},
+				"down": {"uv": [6, 15, 8, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "mailbox",
+			"from": [4, 22, 1],
+			"to": [12, 30, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [4, 22, 1]},
+			"faces": {
+				"north": {"uv": [12, 5.5, 16, 7.5], "texture": "#0"},
+				"east": {"uv": [9, 3.5, 16, 5.5], "texture": "#0"},
+				"south": {"uv": [8, 5.5, 12, 7.5], "texture": "#0"},
+				"west": {"uv": [1, 0, 8, 2], "texture": "#0"},
+				"up": {"uv": [8, 0, 12, 3.5], "texture": "#0"},
+				"down": {"uv": [12, 0, 16, 3.5], "texture": "#0"}
+			}
+		}
+	]
+}
