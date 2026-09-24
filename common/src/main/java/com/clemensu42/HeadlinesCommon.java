@@ -1,6 +1,7 @@
 package com.clemensu42;
 
-import com.clemensu42.world.block.LetterBoxBlock;
+import com.clemensu42.world.block.MailboxBlock;
+import com.clemensu42.world.item.NewspaperItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -32,8 +33,8 @@ public final class HeadlinesCommon {
 
     public static class Blocks{
 
-        public static final Supplier<LetterBoxBlock> LETTER_BOX_BLOCK = Register.block("letter_box",
-                () -> new LetterBoxBlock(BlockBehaviour.Properties.of()
+        public static final Supplier<MailboxBlock> MAILBOX_BLOCK = Register.block("mailbox",
+                () -> new MailboxBlock(BlockBehaviour.Properties.of()
                         .mapColor(MapColor.COLOR_LIGHT_GRAY)
                         .strength(2.5f)
                         .sound(SoundType.METAL)));
@@ -44,11 +45,11 @@ public final class HeadlinesCommon {
 
     public static class Items{
 
-        public static final Supplier<BlockItem> LETTER_BOX = Register.item("letter_box",
-                () -> new BlockItem(Blocks.LETTER_BOX_BLOCK.get(), new Item.Properties()));
+        public static final Supplier<BlockItem> MAILBOX = Register.item("mailbox",
+                () -> new BlockItem(Blocks.MAILBOX_BLOCK.get(), new Item.Properties()));
 
         public static final Supplier<Item> NEWSPAPER = Register.item("newspaper",
-                () -> new Item(new Item.Properties()));
+                () -> new NewspaperItem(new Item.Properties()));
 
         public static void init(){
 
@@ -62,7 +63,8 @@ public final class HeadlinesCommon {
                         .title(Component.translatable("itemGroup.headlines.headlines"))
                         .icon(() -> new ItemStack(Items.NEWSPAPER.get()))
                         .displayItems(((itemDisplayParameters, output) -> {
-                            output.accept(Items.LETTER_BOX.get());
+                            output.accept(Items.MAILBOX.get());
+                            output.accept(Items.NEWSPAPER.get());
                         }))
                         .build());
 
