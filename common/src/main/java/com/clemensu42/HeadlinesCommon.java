@@ -1,6 +1,7 @@
 package com.clemensu42;
 
 import com.clemensu42.world.block.MailboxBlock;
+import com.clemensu42.world.block.PrintingPressBlock;
 import com.clemensu42.world.item.NewspaperItem;
 import com.mojang.logging.LogUtils;
 import net.minecraft.network.chat.Component;
@@ -41,6 +42,14 @@ public final class HeadlinesCommon {
                         .noOcclusion()
                         .dynamicShape()));
 
+        public static final Supplier<PrintingPressBlock> PRINTING_PRESS_BLOCK = Register.block("printing_press",
+                () -> new PrintingPressBlock(BlockBehaviour.Properties.of()
+                        .mapColor(MapColor.WOOD)
+                        .strength(2.5f)
+                        .sound(SoundType.WOOD)
+                        .noOcclusion()
+                        .dynamicShape()));
+
         public static void init(){
         }
     }
@@ -49,6 +58,9 @@ public final class HeadlinesCommon {
 
         public static final Supplier<BlockItem> MAILBOX = Register.item("mailbox",
                 () -> new BlockItem(Blocks.MAILBOX_BLOCK.get(), new Item.Properties()));
+
+        public static final Supplier<BlockItem> PRINTING_PRESS = Register.item("printing_press",
+                () -> new BlockItem(Blocks.PRINTING_PRESS_BLOCK.get(), new Item.Properties()));
 
         public static final Supplier<Item> NEWSPAPER = Register.item("newspaper",
                 () -> new NewspaperItem(new Item.Properties()));
@@ -66,6 +78,7 @@ public final class HeadlinesCommon {
                         .icon(() -> new ItemStack(Items.NEWSPAPER.get()))
                         .displayItems(((itemDisplayParameters, output) -> {
                             output.accept(Items.MAILBOX.get());
+                            output.accept(Items.PRINTING_PRESS.get());
                             output.accept(Items.NEWSPAPER.get());
                         }))
                         .build());
